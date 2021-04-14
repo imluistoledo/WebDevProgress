@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #eaeaea;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+header {
+    background-color: #285f63;
+}
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+header .logotipo {
+    font-family: 'Noto Sans';
+    font-weight: normal;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+header nav {
+    display: flex;
+}
+header nav a {
+    color: #7ed3da;
+    text-decoration: none;
+    outline: none;
+    margin-right: 30px;
+    transition: 0.3s ease all;
+    display: block;
+}
+header nav a i {
+    font-size: 20px;
+    margin-right: 7px;
+}
+header nav a:hover {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+header nav a.activo {
+    color: #ffffff;
+}
+
+/* TEXTO LOGO ANIMADO */
+.texto-animado {
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    overflow: hidden;
+    cursor: default;
+}
+.texto-animado > div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.3s ease all;
+}
+.texto-animado > div.animacion {
+    transform: translateY(-100%);
+}
+
+.texto-animado .segundo-logo {
+    position: absolute;
+    top: 40px;
+}
+/* FIN TEXTO LOGO ANIMADO */
+
+/* IMAGEN HEADER */
+.contenedor-imagen {
+	height: 84.7vh;
+	position: relative;
+    overflow: hidden;
+}
+.contenedor-imagen:hover .contenedor-texto{
+    transform: translateY(-100%);
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+    cursor: initial;
+}
+/* FIN IMAGEN HEADER */
+
+/* TEXTO HEADER */
+.contenedor-texto {
+    background-color: rgba(0, 0, 0, 0.6);
+	color: #cccccc;
+    padding: 40px 240px;
+    text-align: justify;
+    font-size: 24px;
+	transition: all 0.5s ease-out;
+    justify-content: space-between;
+    font-family: 'Noto Sans';
+}
+.contenedor-texto .autor {
+    color: #a0a0a0;
+}
+.contenedor-texto .cita {
+    color: #56ced6;
+}
+/* FIN TEXTO HEADER */
+
+/* MAIN */
+.contenedor-main {
+	max-width: 1100px;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+main {
+	min-height: 100vh;
+    padding-right: 100px;
+    margin-left: 75px;
+}
+.post-info {
+    margin-bottom: 20px;
+	line-height: 25px;
+	color: #4e4e4e;
+    text-align: justify;
+    font-weight: 600;
+    font-size: 20px;
+}
+.cita2 {
+    background: #fff;
+    color: #3d3d3d;
+    border: 3px solid #1c858d;
+    padding: 7px 15px;
+    font-size: 16px;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.3);
+}
+.inicio {
+    padding-left: 15px;
+    border-left: 7px solid #1c858d;
+}
+.post-info i {
+    font-size: 28px;
+    color: #1c858d;
+}
+.post-img {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+}
+.post-img img {
+    width: 70%;
+    margin: 10px auto;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.7);
+}
+
+main .contenido .titulo-contenedor {
+	font-weight: bold;
+    font-size: 32px;
+	padding-top: 30px;
+    color: #1c858d;
+    display: flex;
+    justify-content: space-between;
+}
+main .contenido .subrayado {
+    border-bottom: 5px solid #1c858d;
+    padding-bottom: 10px;
+    box-shadow: 0px 20px 20px -20px rgba(0,0,0,0.7);
+}
+
+main .contenido .fecha {
+	font-size: 16px;
+	color: #7a7a7a;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* CONTENEDOR POETAS */
+
+/* FIN CONTENEDOR POETAS*/
+.poetas {
+    width: 100%;
+}
+.poetas .contenedor-titulo-controles h3 {
+    color: #1c858d;
+}
+.poetas .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* CAROUSEL */
+.poetas .contenedor-tarjetas {
+    width: 100%;
+    padding: 30px 0;
+    scroll-behavior: smooth;
+}
+.poetas .contenedor-tarjetas .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+}
+.poetas .contenedor-tarjetas .tarjetas .tarjeta {
+    min-width: 25%;
+    transition: 0.3s ease all;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.poetas .contenedor-tarjetas .tarjetas .tarjeta:hover {
+    transform: scale(1.1);
+}
+.tarjeta:hover .desc-poeta {
+    transform: translateY(-100%);
+}
+.poetas .contenedor-tarjetas .tarjetas .tarjeta img {
+    width: 100%;
+    height: 200px;
+    vertical-align: text-top;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.poetas .contenedor-tarjetas .tarjetas .tarjeta .desc-poeta h3 {
+    color: #1c858d;
+}
+.poetas .contenedor-tarjetas .tarjetas .tarjeta .desc-poeta {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 14px;
+    transition: 0.3s ease all;
+    z-index: 10;
+}
+.poetas .contenedor-tarjetas .tarjetas .tarjeta .nombre-poeta {
+    background: #fff;
+    color: #3d3d3d;
+    padding: 15px 10px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+}
+
+/* FIN MAIN */
+
+/* ASIDE */
+aside {
+	min-width: 22%;
+	margin: 40px 75px 20px 0;
+	height: 100%;
+	background: #449fa5;
+	padding: 10px 20px;
+	border-radius: 7px;
+    position: sticky;
+    top: 30px;
+}
+aside .indice a {
+	display: block;
+	margin: 5px 0;
+    padding: 5px 0;
+	color: #fff;
+    font-family: 'Noto Sans';
+    font-weight: bolder;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: 0.2s ease-in all;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border-radius: 15px;
+}
+aside .indice a:hover {
+    transform: scale(1.15);
+    background: #9deff5;
+    color: #186166;
+}
+/* FIN ASIDE */
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background-color: #32363E;
+    margin-top: 100px;
+}
+
+.footer-table {
+    margin: 0 auto;
+    padding: 25px 0;
+    color: #D2D7E1;
+    font-family: 'Calibri';
+}
+
+.footer-table a {
+    text-decoration: none;
+    color: #D2D7E1;
+}
+
+.footer-table a:hover {
+    color: #AFB5BF;
+}
+
+.footer-table td {
+    padding: 10px 60px;
+}
+
+.footer-head {
+    color: #A1A9B9;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Calibri';
+    letter-spacing: 3px;
+}
+
+.footer2 {
+    background-color: #21252C;
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    color: #D2D7E1;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer2 .cr {
+    text-align: right;
+}
+/* FIN FOOTER */
